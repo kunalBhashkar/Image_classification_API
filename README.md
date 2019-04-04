@@ -59,8 +59,18 @@ achieving over 75% accuracy in 10 epochs through 5 batches.
 
 ## Steps to run this project 
 Step01: Firstly, Download the model and put into ./web folder.
+
+
 Step02: Install the docker [docker_install](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+
+
 Step03: Install MongoDB [Mongo_install](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/) (on Ubuntu)
+
+
 Step04: Create the virtual environment by command: virtualenv venv (on Ubuntu)
+
+
 step05: Activate the virtual environment: source bin/activate (For Ubuntu)
+
+
 step06: Run sudo docker-compose up
