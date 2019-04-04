@@ -1,0 +1,35 @@
+# version: '3'
+# services:
+#   web:
+#     build: ./web
+#     ports:
+#       - "5000:5000"
+#     links:
+#       - db
+#   db:
+#     build: ./db
+
+# Use root/example as user/password credentials
+version: '3'
+services:    
+  web:
+    build: ./web
+    ports:
+      - "5000:5000"
+    # links:
+    #   - db
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: myUserAdmin
+      MONGO_INITDB_ROOT_PASSWORD: abc123
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: myUserAdmin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: abc123
